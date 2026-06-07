@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# AWS
+.aws/
+
+# Environment files
+.env
+.env.*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Mac/Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
