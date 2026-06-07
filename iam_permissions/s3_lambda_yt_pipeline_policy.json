@@ -1,0 +1,66 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "S3ListBuckets",
+			"Effect": "Allow",
+			"Action": [
+				"s3:ListBucket"
+			],
+			"Resource": [
+				"arn:aws:s3:::yt-data-pipeline-brozne-ap-southeast-2-dev",
+				"arn:aws:s3:::yt-data-pipelines-silver-ap-southeast-2-dev",
+				"arn:aws:s3:::yt-data-pipelines-glue-athena-result"
+			]
+		},
+		{
+			"Sid": "S3ObjectAccess",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject",
+				"s3:DeleteObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::yt-data-pipeline-brozne-ap-southeast-2-dev/*",
+				"arn:aws:s3:::yt-data-pipelines-silver-ap-southeast-2-dev/*",
+				"arn:aws:s3:::yt-data-pipelines-glue-athena-result/*"
+			]
+		},
+		{
+			"Sid": "GlueAccess",
+			"Effect": "Allow",
+			"Action": [
+				"glue:GetDatabase",
+				"glue:GetTable",
+				"glue:GetTables",
+				"glue:GetPartitions",
+				"glue:CreateTable",
+				"glue:UpdateTable",
+				"glue:CreatePartition",
+				"glue:BatchCreatePartition"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "AthenaAccess",
+			"Effect": "Allow",
+			"Action": [
+				"athena:GetWorkGroup",
+				"athena:StartQueryExecution",
+				"athena:GetQueryExecution",
+				"athena:GetQueryResults",
+				"athena:StopQueryExecution"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "SNSAccess",
+			"Effect": "Allow",
+			"Action": [
+				"sns:Publish"
+			],
+			"Resource": "arn:aws:sns:ap-southeast-2:<ACCOUNT_ID>:yt-data-pipeline-alerts-dev"
+		}
+	]
+}
