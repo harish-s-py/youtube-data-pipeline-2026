@@ -440,3 +440,7 @@ LIMIT 10;
 
 - **YouTube Data API v3** — live trending video data (primary)
 - **Kaggle YouTube Trending Dataset** — historical data for backfill and testing
+
+## Orchestration
+
+![Orachestration](YouTube%20Trending%20Data%20Pipeline%20Orchestration.png)
