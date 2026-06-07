@@ -26,6 +26,7 @@ A cloud-native ETL pipeline that ingests YouTube trending video data across 10 r
 - [Monitoring and Alerting](#monitoring-and-alerting)
 - [Supported Regions](#supported-regions)
 - [Data Sources](#data-sources)
+- [Orchestration](#orchestration)
 
 ---
 
